@@ -9,8 +9,8 @@
     --secondary-color: #1e40af;
     --text-color: #1f2937;
     --text-light: #6b7280;
-    --bg-color: #ffffff;
-    --bg-light: #f9fafb;
+    --bg-color: #faf8f5;
+    --bg-light: #f5f3f0;
     --border-color: #e5e7eb;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -25,7 +25,7 @@ body {
 
 /* Navigation */
 .navbar {
-    background-color: var(--bg-color);
+    background-color: var(--bg-light);
     box-shadow: var(--shadow);
     position: sticky;
     top: 0;
@@ -117,14 +117,13 @@ body {
 
 /* Home Section */
 .name {
-    font-size: 4rem;
-    font-weight: 700;
+    font-family: 'Dancing Script', cursive;
+    font-size: 5rem;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 3rem;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--text-color);
+    letter-spacing: 2px;
 }
 
 .profile-section {
@@ -238,63 +237,69 @@ body {
 
 /* Speaking Initiatives */
 .speaking-list {
-    display: grid;
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     max-width: 900px;
     margin: 0 auto;
 }
 
 .speaking-item {
-    padding: 2rem;
-    background-color: var(--bg-light);
-    border-radius: 12px;
-    box-shadow: var(--shadow);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.speaking-item:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.speaking-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    flex-wrap: wrap;
-    gap: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    padding: 0.5rem 0;
 }
 
 .speaking-event {
-    font-size: 1.5rem;
-    color: var(--text-color);
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .speaking-date {
     color: var(--text-light);
-    font-size: 0.9rem;
+}
+
+.speaking-separator {
+    color: var(--text-light);
+    margin: 0 0.75rem;
 }
 
 .speaking-topic {
-    font-size: 1.1rem;
     color: var(--text-color);
-    margin-bottom: 1rem;
     font-style: italic;
 }
 
 .slides-link {
-    display: inline-block;
     color: var(--primary-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .slides-link:hover {
     color: var(--secondary-color);
     text-decoration: underline;
+}
+
+/* Publications */
+.publications-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.publication-item {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    padding: 0.5rem 0;
+}
+
+.publication-text {
+    color: var(--text-color);
 }
 
 /* Footer */
@@ -335,9 +340,15 @@ footer {
         min-width: auto;
     }
 
-    .speaking-header {
+    .speaking-item {
+        font-size: 1rem;
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .speaking-separator {
+        display: none;
     }
 
     .container {
