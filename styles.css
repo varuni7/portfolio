@@ -208,6 +208,11 @@ body {
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.speaking-entry {
+    margin-bottom: 0.5rem;
 }
 
 .speaking-date {
@@ -217,7 +222,20 @@ body {
 
 .speaking-event {
     color: var(--text-color);
+    text-decoration: underline;
     margin-right: 1rem;
+}
+
+.speaking-event:hover {
+    text-decoration: none;
+}
+
+.speaking-title {
+    color: var(--text-color);
+}
+
+.speaking-slides {
+    margin-top: 0.25rem;
 }
 
 .slides-link {
@@ -227,6 +245,13 @@ body {
 
 .slides-link:hover {
     text-decoration: none;
+}
+
+.speaking-note {
+    color: var(--text-color);
+    font-style: italic;
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
 }
 
 /* Publications */
